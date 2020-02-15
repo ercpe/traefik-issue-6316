@@ -16,3 +16,9 @@
   filePath = "/tmp/access.json.log"
   [accessLog.fields]
     defaultMode = "keep"
+    [accessLog.fields.names]
+      ClientUsername = "drop"
+    [accessLog.fields.headers]
+      defaultMode = "keep"
+      [accessLog.fields.headers.names]
+        Authorization = "drop"
