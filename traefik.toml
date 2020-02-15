@@ -1,0 +1,18 @@
+
+[log]
+  level = "DEBUG"
+
+[entryPoints]
+  [entryPoints.web]
+    address = ":8081"
+
+[providers]
+  [providers.file]
+    filename = "traefik-providers.toml"
+
+[accessLog]
+  format = "json"
+  bufferingSize = 0
+  filePath = "/tmp/access.json.log"
+  [accessLog.fields]
+    defaultMode = "keep"
